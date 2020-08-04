@@ -8,4 +8,8 @@ class Song < ApplicationRecord
     released == true
   end
 
+  def current_year
+    Date.today.year
+  end
+
 end
