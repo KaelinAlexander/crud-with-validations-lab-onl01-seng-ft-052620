@@ -1,4 +1,5 @@
 <% @songs.each do |song| %>
+<% binding.pry %>
 <div class="song">
   <span><%= song.title %></span>
   <%= link_to song.title, song_path(song) %>
