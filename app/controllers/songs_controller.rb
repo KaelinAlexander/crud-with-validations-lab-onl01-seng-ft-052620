@@ -46,5 +46,4 @@ class SongsController < ApplicationController
     redirect_to people_url
   end
 
-
 end
