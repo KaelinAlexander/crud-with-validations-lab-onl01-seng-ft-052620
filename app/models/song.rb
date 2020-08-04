@@ -1,7 +1,7 @@
 class Song < ApplicationRecord
   validates :title, presence: true, uniqueness: {scope: :release_year}
   validates :release_year, presence: true, numericality: {less_than_or_equal_to: :current_year}, if: :is_released,
-  validate :check_dates
+  # validate :check_dates
   validates :artist_name, presence: true
 
   private
@@ -14,10 +14,10 @@ class Song < ApplicationRecord
     released == true
   end
 
-  def check_dates
-    if self.release_year && self.release_year > Time.now.year
-      self.errors.add(:release_year, "Can't be in the future")
-    end
-  end
+  # def check_dates
+  #   if self.release_year && self.release_year > Time.now.year
+  #     self.errors.add(:release_year, "Can't be in the future")
+  #   end
+  # end
 
 end
