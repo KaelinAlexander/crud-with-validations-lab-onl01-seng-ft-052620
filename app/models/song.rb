@@ -1,6 +1,6 @@
 class Song < ApplicationRecord
   validates :title, presence: true, uniqueness: {scope: :release_year}
-  validates :release_year, presence: true, numericality: {less_than_or_equal_to: :current_year}, if: :is_released,
+  validates :release_year, presence: true, numericality: {less_than_or_equal_to: :current_year}, if: :is_released
   # validate :check_dates
   validates :artist_name, presence: true
 
