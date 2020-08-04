@@ -4,7 +4,6 @@ class Song < ApplicationRecord
   validates :release_year, presence: true, if: :released?
   validates :artist, presence: true
 
-
   def released?
     released == true
   end
