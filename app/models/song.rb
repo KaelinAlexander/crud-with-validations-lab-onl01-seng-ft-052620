@@ -4,7 +4,7 @@ class Song < ApplicationRecord
   validate :check_dates
   validates :release_year, numericality: {less_than_or_equal_to: :current_year}
   validates :artist_name, presence: true
-  
+
 
   def current_year
     Time.now.year
