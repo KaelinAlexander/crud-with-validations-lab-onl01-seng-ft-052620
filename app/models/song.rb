@@ -9,7 +9,7 @@ class Song < ApplicationRecord
   end
 
   def current_year
-    Date.today.year
+    Time.now.year
   end
 
 end
