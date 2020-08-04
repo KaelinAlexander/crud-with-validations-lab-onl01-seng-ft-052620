@@ -40,7 +40,6 @@ class SongsController < ApplicationController
     redirect_to songs_url
   end
 
-
   private
 
   def song_params
