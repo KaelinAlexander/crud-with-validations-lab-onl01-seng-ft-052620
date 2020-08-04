@@ -8,7 +8,7 @@ class Song < ApplicationRecord
   private
 
   def current_year
-    Time.now.year
+    Date.now.year
   end
 
   def check_dates
