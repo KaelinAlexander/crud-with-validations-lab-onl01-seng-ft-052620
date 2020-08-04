@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :songs
-  delete '/songs/:id', to: 'people#destroy', as:'person'
+  delete '/songs/:id', to: 'songs#destroy', as:'song'
 end
