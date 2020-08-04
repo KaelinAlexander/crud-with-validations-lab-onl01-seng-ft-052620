@@ -12,7 +12,7 @@ class Song < ApplicationRecord
   end
 
   def check_dates
-    if self.release_year && self.release_year > Date.today.year
+    if self.release_year && self.release_year > Time.now.year
       self.errors.add(:release_year, "Can't be in the future")
     end
   end
